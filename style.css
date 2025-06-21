@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  color: #0f0;
+}
+
+/* Video Preview */
+#video {
+  position: fixed;
+  width: 20vw;
+  height: 25vh;
+  max-width: 160px;
+  aspect-ratio: 3/4;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #0f0;
+  border-radius: 15px;
+}
+
+
+/* Radar */
+#radar {
+  width: 85vw;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #00ff00cc;
+  display: block;
+}
+
+/* Detection Status */
+#status {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  background: #000;
+  padding: 5px 10px;
+  border: 1px solid #0f0;
+  border-radius: 5px;
+  user-select: none;
+  z-index: 10;
+}
+
+/* Detected Object List */
+#detected-list {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  background: #000;
+  color: #0f0;
+  padding: 8px 10px;
+  border: 1px solid #0f0;
+  border-radius: 6px;
+  max-width: 45vw;
+  max-height: 40vh;
+  overflow-y: auto;
+  line-height: 1.4;
+  white-space: pre-line;
+  z-index: 10;
+}
+
+/* Control Buttons */
+#controls {
+  position: fixed;
+  display: flex;
+  bottom: 15px;
+  gap: 10px;
+  align-items: center;
+  margin: 15px;
+  z-index: 20;
+}
+
+#controls button {
+  background-color: #001100;
+  color: #0f0;
+  border: 1px solid #0f0;
+  border-radius: 6px;
+  padding: 6px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: #002200;
+}
+
+/* Loader Screen */
+#loader-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #0f0;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.loader-bar {
+  width: 60vw;
+  max-width: 240px;
+  height: 30px;
+  border: 2px solid #00ff00;
+  background-color: #111;
+  position: relative;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #00ff00;
+}
+
+/* 📱 Mobile Tweaks */
+@media (max-width: 480px) {
+  #video {
+    width: 30vw;
+    top: 12px;
+  }
+
+  #detected-list {
+    font-size: 12px;
+    max-width: 60vw;
+  }
+
+  #status {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  #controls button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .loader-text {
+    font-size: 12px;
+  }
+
+  .loader-bar {
+    height: 20px;
+  }
+}
+
