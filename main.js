@@ -396,9 +396,9 @@ const finishInterval = setInterval(() => {
 
   setTimeout(() => {
     setInterval(() => {
-      if (Math.random() < 0.7) spawnFakeGhostBlip();
-    }, 3500);
-  }, 4000);
+      if (Math.random() < 0.3) spawnFakeGhostBlip();
+    }, 4000);
+  }, 7000);
 
   setInterval(() => {
     overlay.style.opacity = Math.random() > 0.95 ? '0.8' : '1';
