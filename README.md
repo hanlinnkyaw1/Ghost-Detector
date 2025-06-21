@@ -15,14 +15,6 @@ This is a futuristic, radar-themed web app powered by TensorFlow.js and COCO-SSD
 - 🧪 **Fake Loader** to simulate model loading visually
 - 📱 **Responsive Design** for mobile & desktop
 
----
-
-## 📸 Screenshots
-
-![Radar UI](screenshots/radar-ui.jpg)
-*(Sample image from the running application)*
-
----
 
 ## 🛠️ Setup Instructions
 
